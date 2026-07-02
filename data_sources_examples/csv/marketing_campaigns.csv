@@ -1,0 +1,6 @@
+campaign_id,campaign_name,start_date,end_date,budget_usd,channel
+CMP001,Spring Awareness,2026-03-01,2026-03-31,12000,email
+CMP002,Early Summer Sale,2026-05-15,2026-06-15,25000,paid_search
+CMP003,Loyalty Push,2026-07-01,2026-07-20,8000,in_app
+CMP004,Back to School,2026-08-10,2026-09-05,18000,social
+CMP005,Holiday Preview,2026-11-01,2026-11-30,30000,display
