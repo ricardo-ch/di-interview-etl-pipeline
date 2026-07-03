@@ -20,7 +20,7 @@ message Article {
   string description = 5;
   string category = 6;
   string product_type = 7;
-  AttributeSpecification attributes = 8;
+  repeated AttributeSpecification attributes = 8;
   google.protobuf.Timestamp published_at = 9;
   google.protobuf.Timestamp planned_expiration_at = 10;
   google.protobuf.Timestamp closed_at = 11;
