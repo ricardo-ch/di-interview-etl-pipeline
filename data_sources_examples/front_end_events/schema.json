@@ -52,5 +52,10 @@
         ]
       }
     ]
+  },
+  {
+    "name": "user_id",
+    "type": "STRING",
+    "mode": "NULLABLE"
   }
 ]
