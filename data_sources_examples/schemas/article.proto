@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "shared.proto";
+
+package interview.articles;
+
+message ArticleEnvelope {
+  int64 event_ts = 1;
+  int64 occurred_ts = 2;
+  shared.EventType event_type = 3;
+  Article payload = 4;
+}
+
+message Article {
+  string article_id = 1;
+  string seller_id = 2;
+  string title = 3;
+  repeated string images = 4;
+  string description = 5;
+  string category = 6;
+  string product_type = 7;
+  AttributeSpecification attributes = 8;
+  google.protobuf.Timestamp published_at = 9;
+  google.protobuf.Timestamp planned_expiration_at = 10;
+  google.protobuf.Timestamp closed_at = 11;
+  ClosureReason closure_reason = 12;
+}
+
+enum ClosureReason {
+  CLOSURE_REASON_UNSPECIFIED = 0;
+  CLOSURE_REASON_SOLD = 1;
+  CLOSURE_REASON_CANCELLED = 2;
+  CLOSURE_REASON_EXPIRED = 3;
+  CLOSURE_REASON_OTHER = 4;
+}
+
+message AttributeSpecification {
+  repeated Attribute attributes = 1;
+}
+
+message Attribute {
+  string name = 1;
+  string value = 2;
+}

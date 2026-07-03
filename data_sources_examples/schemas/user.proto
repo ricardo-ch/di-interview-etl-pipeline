@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "shared.proto";
+
+package interview.users;
+
+message UserEnvelope {
+  int64 event_ts = 1;
+  int64 occurred_ts = 2;
+  shared.EventType event_type = 3;
+  User payload = 4;
+}
+
+message User {
+  string user_id = 1;
+  string email = 2;
+  string nickname = 3;
+  google.protobuf.Timestamp registered_at = 4;
+  google.protobuf.Timestamp verified_at = 5;
+  UserStatus status = 6;
+}
+
+enum UserStatus {
+  USER_STATUS_UNSPECIFIED = 0;
+  ACTIVE = 1;
+  INACTIVE = 2;
+  SUSPENDED = 3;
+}
