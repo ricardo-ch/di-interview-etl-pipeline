@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package interview.shared;
+
+enum EventType {
+  EVENT_TYPE_UNSPECIFIED = 0;
+  CREATE = 1;
+  UPDATE = 2;
+  DELETE = 3;
+}
