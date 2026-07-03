@@ -11,3 +11,4 @@ Fake data samples for Data Engineering Case Study interview.
     * `article.proto` with the articles specification
     * `transction.proto` with the schema for transactions
     * `user.proto` with the specification for customers of the platform
+3. json schema of frontend events
