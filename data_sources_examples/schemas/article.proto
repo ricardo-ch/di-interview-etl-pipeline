@@ -19,12 +19,11 @@ message Article {
   repeated string images = 4;
   string description = 5;
   string category = 6;
-  string product_type = 7;
-  repeated AttributeSpecification attributes = 8;
-  google.protobuf.Timestamp published_at = 9;
-  google.protobuf.Timestamp planned_expiration_at = 10;
-  google.protobuf.Timestamp closed_at = 11;
-  ClosureReason closure_reason = 12;
+  AttributeSpecification attributes = 7;
+  google.protobuf.Timestamp published_at = 8;
+  google.protobuf.Timestamp planned_expiration_at = 9;
+  google.protobuf.Timestamp closed_at = 10;
+  ClosureReason closure_reason = 11;
 }
 
 enum ClosureReason {
