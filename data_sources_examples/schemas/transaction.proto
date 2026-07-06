@@ -15,9 +15,7 @@ message Transaction {
   string transaction_id = 1;
   string article_id = 2;
   string user_id = 3;
-  int64 total_amount_gross_cents = 4;
-  int64 discount_applied_cents = 5;
-  int64 total_amount_net_cents = 6;
+  int64 total_amount_cents = 4;
   TransactionType transaction_type = 7;
 }
 
